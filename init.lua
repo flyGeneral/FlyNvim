@@ -10,10 +10,12 @@ require("plugin-config.nvim-treesitter")
 require("plugin-config.which-key")
 -- bufferline
 require("plugin-config.bufferline")
+-- bufferline
+require("plugin-config.fzf")
 -- nvimtree
 -- require("plugin-config.nvimtree")
 -- telescope 文件模糊搜索
-require("plugin-config.telescope")
+-- require("plugin-config.telescope")
 -- lsp 配置
 require("lsp.setup")
 -- lsp auto complete

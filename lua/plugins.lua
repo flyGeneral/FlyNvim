@@ -63,7 +63,7 @@ packer.startup({
     }
 
     use("liuchengxu/vista.vim")
-    use("easymotion/vim-easymotion")
+    -- use("easymotion/vim-easymotion")
     -- -- lualine
     -- use({
     --   "nvim-lualine/lualine.nvim",
@@ -75,19 +75,6 @@ packer.startup({
       "nvim-treesitter/nvim-treesitter",
       commit = '4cccb6f494eb255b32a290d37c35ca12584c74d0',
     })
-    -- telescope
-    -- use({
-    --   "nvim-telescope/telescope.nvim", tag = '0.1.1',
-    --  requires = {
-    --    "nvim-lua/plenary.nvim",
-    --    "kyazdani42/nvim-web-devicons"
-    --  },
-    -- })
-    -- use {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}
-
-    -- -- telescope extensions
-    -- use("LinArcX/telescope-env.nvim")
-    -- use("nvim-telescope/telescope-ui-select.nvim")
     -- -- dashboard-nvim
     -- use("glepnir/dashboard-nvim")
     use("junegunn/fzf")
