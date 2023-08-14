@@ -27,7 +27,7 @@ vim.api.nvim_set_keymap("n", "<leader>b8", ":BufferLineGoToBuffer 8<CR>", {norem
 vim.api.nvim_set_keymap("n", "<leader>b9", ":BufferLineGoToBuffer 9<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>bg", ":BufferLinePick", {noremap = true, silent = true})
 
-vim.api.nvim_set_keymap("n", "bt", ":BufferLineCycleNext<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "bn", ":BufferLineCycleNext<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "bp", ":BufferLineCyclePrev<CR>", {noremap = true, silent = true})
 
 --- 配置tabline快捷键，主要以 t开头代表 t

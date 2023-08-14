@@ -22,6 +22,16 @@ local map = vim.api.nvim_set_keymap
 local pluginKeys = {}
 
 
+-- vim.api.nvim_set_keymap('n', '<Tab>', '<Nop>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-u>', '10k', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '10j', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '10h', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-l>', '10l', { noremap = true })
+
+vim.api.nvim_set_keymap('i', '<C-u>', '<C-o>10k', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-k>', '<C-o>10j', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-j>', '<C-o>10h', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-l>', '<C-o>10l', { noremap = true })
 
 -- -- Telescope 命令模式快捷键
 -- map("n", "<leader>tff", ":Telescope find_files<CR>", opt)

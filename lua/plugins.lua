@@ -46,6 +46,24 @@ packer.startup({
     --    "kyazdani42/nvim-tree.lua",
     --    requires = "kyazdani42/nvim-web-devicons",
     -- })
+    use {
+        "vim-airline/vim-airline",
+        requires = {
+          "vim-airline/vim-airline-themes",
+          --综合图标支持such vim-airline lightline, vim-startify
+          "ryanoasis/vim-devicons"
+        }
+    }
+
+    use {
+       "Shougo/defx.nvim",
+    requires = {
+          "kristijanhusak/defx-icons", -- dexf文件管理图标支持
+          "t9md/vim-choosewin" -- 窗口选择器,可以让defx使用i打开文件
+        }
+    }
+
+
     -- bufferline
     use {
         'akinsho/bufferline.nvim', tag = "v2.*",
