@@ -55,14 +55,13 @@ packer.startup({
         }
     }
 
-    use {
-       "Shougo/defx.nvim",
-    requires = {
-          "kristijanhusak/defx-icons", -- dexf文件管理图标支持
-          "t9md/vim-choosewin" -- 窗口选择器,可以让defx使用i打开文件
-        }
-    }
-
+    -- use {
+    --    "Shougo/defx.nvim",
+    -- requires = {
+    --       "kristijanhusak/defx-icons", -- dexf文件管理图标支持
+    --       "t9md/vim-choosewin" -- 窗口选择器,可以让defx使用i打开文件
+    --     }
+    -- }
 
     -- bufferline
     use {
