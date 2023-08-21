@@ -10,6 +10,8 @@ require("plugin-config.neo-tree")
 -- 插件配置
 -- which key
 require("plugin-config.which-key")
+-- 状态栏插件
+require("plugin-config.lualine");
 -- bufferline
 require("plugin-config.bufferline")
 -- bufferline

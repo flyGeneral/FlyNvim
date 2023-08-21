@@ -1,5 +1,10 @@
+local status, bufferline = pcall(require, "bufferline")
+if (not status) then
+  return
+end
+
 vim.opt.termguicolors = true
-require("bufferline").setup{
+bufferline.setup{
     options = {
         mode = "buffer",
         -- 显示id
@@ -29,10 +34,3 @@ vim.api.nvim_set_keymap("n", "<leader>bg", ":BufferLinePick", {noremap = true, s
 
 vim.api.nvim_set_keymap("n", "bn", ":BufferLineCycleNext<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "bp", ":BufferLineCyclePrev<CR>", {noremap = true, silent = true})
-
---- 配置tabline快捷键，主要以 t开头代表 t
---- 关闭当前标签页
-vim.api.nvim_set_keymap("n", "tc", ":tabclose<CR>", {noremap = true, silent = true})
---- 关闭所有标签页，仅保留当前标签页
-vim.api.nvim_set_keymap("n", "to", ":tabonly<CR>", {noremap = true, silent = true})
---- gt 切换到下一个，gT切换到上一个

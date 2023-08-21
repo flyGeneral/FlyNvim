@@ -46,14 +46,14 @@ packer.startup({
     --    "kyazdani42/nvim-tree.lua",
     --    requires = "kyazdani42/nvim-web-devicons",
     -- })
-    use {
-        "vim-airline/vim-airline",
-        requires = {
-          "vim-airline/vim-airline-themes",
-          --综合图标支持such vim-airline lightline, vim-startify
-          "ryanoasis/vim-devicons"
-        }
-    }
+    -- use {
+    --     "vim-airline/vim-airline",
+    --     requires = {
+    --       "vim-airline/vim-airline-themes",
+    --       --综合图标支持such vim-airline lightline, vim-startify
+    --       "ryanoasis/vim-devicons"
+    --     }
+    -- }
 
     -- use {
     --    "Shougo/defx.nvim",
@@ -63,6 +63,11 @@ packer.startup({
     --     }
     -- }
 
+    -- 状态栏插件
+    use {
+        "nvim-lualine/lualine.nvim",
+        requires = {"kyazdani42/nvim-web-devicons", opt = true}
+    }
     -- bufferline
     use {
         'akinsho/bufferline.nvim', tag = "v2.*",
@@ -142,6 +147,11 @@ packer.startup({
     -- Snippet 引擎
     -- 补全源
     use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
+
+    -- LSP UI 增强
+    use{"glepnir/lspsaga.nvim"}
+
+    use {'simrat39/symbols-outline.nvim'}
 
     -- -- UI 增强
     -- use("onsails/lspkind-nvim")
