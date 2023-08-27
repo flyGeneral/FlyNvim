@@ -11,6 +11,7 @@ set relativenumber
 " tab=4个空格
 set tabstop=4
 set shiftwidth=4
+set expandtab
 " 改变 vim中光标的形状
 let g:db_ui_use_nerd_fonts=1
 let &t_SI.="\e[5 q" "SI = INSERT mode
