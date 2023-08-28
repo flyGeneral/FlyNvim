@@ -56,9 +56,11 @@ packer.startup({
             "hrsh7th/cmp-calc", --输入数学算式（如1+1=）自动计算
             "f3fora/cmp-spell", --nvim-cmp 的拼写源基于 vim 的拼写建议
             "hrsh7th/cmp-emoji", --输入: 可以显示表情
+            "hrsh7th/cmp-cmdline",
+            "hrsh7th/cmp-vsnip", -- vsnip
+            "hrsh7th/vim-vsnip", -- vsnip
         }
     }
-
     -- 代码段提示
     use {
         "L3MON4D3/LuaSnip",
@@ -67,6 +69,8 @@ packer.startup({
             "rafamadriz/friendly-snippets" --代码段合集
         }
     }
+    -- lspconfig
+    use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
 
     if paccker_bootstrap then
       packer.sync()

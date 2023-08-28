@@ -6,6 +6,8 @@ runtime ./vimrc.vim
 "./lua/plugins.lua
 lua require('plugins')
 lua require('plugin-config.lualine')
+" lsp config
+lua require("lsp.setup")
 " 按键映射
 runtime ./maps.vim
 
