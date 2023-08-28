@@ -66,11 +66,11 @@ packer.startup({
     use("liuchengxu/vista.vim")
 
     use({
-      "nvim-treesitter/nvim-treesitter",
-      commit = '4cccb6f494eb255b32a290d37c35ca12584c74d0',
+      "nvim-treesitter/nvim-treesitter", commit = '4cccb6f494eb255b32a290d37c35ca12584c74d0',
+      requires = {
+        "p00f/nvim-ts-rainbow"
+      }
     })
-
-    use("luochen1990/rainbow")
 
     -- 模糊搜索
     use("junegunn/fzf")
