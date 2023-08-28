@@ -6,9 +6,14 @@ end
 vim.opt.termguicolors = true
 bufferline.setup{
     options = {
+        numbers = "ordinal", -- id
         mode = "buffer",
-        -- 显示id
-        number = "ordinal",
+        -- icons
+        modified_icon = "●",
+        max_name_length = 15,
+        max_prefix_length = 12, -- prefix used when a buffer is de-duplicated
+        tab_size = 15,
+        color_icons = true,
 		offsets = {
             {
                 filetype = "NvimTree",
@@ -17,7 +22,7 @@ bufferline.setup{
                 text_align = "left"
             }
         }
-    }
+    },
 }
 
 -- 快速在buffer间跳转
