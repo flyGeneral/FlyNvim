@@ -41,27 +41,6 @@ packer.startup({
     -- 快捷键提示
     use {"folke/which-key.nvim"}
     -------------------------- plugins -------------------------------------------
-    -- nvim-tree
-    -- use({
-    --    "kyazdani42/nvim-tree.lua",
-    --    requires = "kyazdani42/nvim-web-devicons",
-    -- })
-    -- use {
-    --     "vim-airline/vim-airline",
-    --     requires = {
-    --       "vim-airline/vim-airline-themes",
-    --       --综合图标支持such vim-airline lightline, vim-startify
-    --       "ryanoasis/vim-devicons"
-    --     }
-    -- }
-
-    -- use {
-    --    "Shougo/defx.nvim",
-    -- requires = {
-    --       "kristijanhusak/defx-icons", -- dexf文件管理图标支持
-    --       "t9md/vim-choosewin" -- 窗口选择器,可以让defx使用i打开文件
-    --     }
-    -- }
 
     -- 状态栏插件
     use {
@@ -85,14 +64,7 @@ packer.startup({
     }
 
     use("liuchengxu/vista.vim")
-    -- use("easymotion/vim-easymotion")
-    -- -- lualine
-    -- use({
-    --   "nvim-lualine/lualine.nvim",
-    --   requires = { "kyazdani42/nvim-web-devicons" },
-    -- })
-    -- use("arkav/lualine-lsp-progress")
-    -- nvim-treesitter
+
     use({
       "nvim-treesitter/nvim-treesitter",
       commit = '4cccb6f494eb255b32a290d37c35ca12584c74d0',
@@ -100,37 +72,11 @@ packer.startup({
 
     use("luochen1990/rainbow")
 
-    -- -- dashboard-nvim
-    -- use("glepnir/dashboard-nvim")
+    -- 模糊搜索
     use("junegunn/fzf")
     use("junegunn/fzf.vim")
-    -- tagbar
-    -- use("preservim/tagbar")
-    -- -- project
-    -- use("ahmedkhalf/project.nvim")
-    -- -- treesitter
-    -- use({
-    --   "nvim-treesitter/nvim-treesitter",
-    --   run = ":TSUpdate",
-    -- })
-    -- use("p00f/nvim-ts-rainbow")
-    -- -- indent-blankline
-    -- use("lukas-reineke/indent-blankline.nvim")
 
-    -- language
-    -- use 'neovim/nvim-lspconfig'
-    -- use 'glepnir/lspsaga.nvim'
-    -- use 'hrsh7th/cmp-nvim-lsp'
-    -- use 'hrsh7th/cmp-buffer'
-    -- use 'hrsh7th/cmp-path'
-    -- use 'hrsh7th/cmp-cmdline'
-    -- use 'hrsh7th/nvim-cmp'
-    -- use 'L3MON4D3/LuaSnip'
-    -- use 'nvim-treesitter/nvim-treesitter'
-    -- use 'simrat39/rust-tools.nvim'
-    -- use 'dnlhc/glance.nvim'
-
-    --------------------- LSP --------------------
+    --------------------- LSP 代码补全，自动提示 --------------------
     use("williamboman/nvim-lsp-installer")
     -- Lspconfig
     use("neovim/nvim-lspconfig")
@@ -160,70 +106,15 @@ packer.startup({
             "rafamadriz/friendly-snippets" --代码段合集
         }
     }
-
     -- 补全引擎
     -- Snippet 引擎
     -- 补全源
     use("hrsh7th/cmp-nvim-lsp-signature-help") -- { name = 'nvim_lsp_signature_help' }
-
     -- LSP UI 增强
     use{"glepnir/lspsaga.nvim"}
     use {'simrat39/symbols-outline.nvim'}
 
 
-    -- -- UI 增强
-    -- use("onsails/lspkind-nvim")
-    -- use("tami5/lspsaga.nvim")
-    -- -- 代码格式化
-    -- use("mhartington/formatter.nvim")
-    -- use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
-    -- -- TypeScript 增强
-    -- use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
-    -- -- Lua 增强
-    -- use("folke/lua-dev.nvim")
-    -- -- JSON 增强
-    -- use("b0o/schemastore.nvim")
-    -- -- Rust 增强
-    -- use("simrat39/rust-tools.nvim")
-    -- --------------------- colorschemes --------------------
-    -- -- tokyonight
-    -- use("folke/tokyonight.nvim")
-    -- -- OceanicNext
-    -- use("mhartington/oceanic-next")
-    -- -- gruvbox
-    -- use({
-    --   "ellisonleao/gruvbox.nvim",
-    --   requires = { "rktjmp/lush.nvim" },
-    -- })
-    -- -- zephyr
-    -- -- use("glepnir/zephyr-nvim")
-    -- -- nord
-    -- use("shaunsingh/nord.nvim")
-    -- -- onedark
-    -- use("ful1e5/onedark.nvim")
-    -- -- nightfox
-    -- use("EdenEast/nightfox.nvim")
-
-    -- -------------------------------------------------------
-    -- use({ "akinsho/toggleterm.nvim" })
-    -- -- surround
-    -- use("ur4ltz/surround.nvim")
-    -- -- Comment
-    -- use("numToStr/Comment.nvim")
-    -- -- nvim-autopairs
-    -- use("windwp/nvim-autopairs")
-    -- -- git
-    -- use({ "lewis6991/gitsigns.nvim" })
-    -- -- vimspector
-    -- use("puremourning/vimspector")
-    -- ----------------------------------------------
-    -- use("mfussenegger/nvim-dap")
-    -- use("theHamsta/nvim-dap-virtual-text")
-    -- use("rcarriga/nvim-dap-ui")
-    -- -- use("Pocco81/DAPInstall.nvim")
-    -- -- use("jbyuki/one-small-step-for-vimkind")
-
-    -- use("j-hui/fidget.nvim")
     if paccker_bootstrap then
       packer.sync()
     end
