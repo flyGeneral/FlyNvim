@@ -36,6 +36,7 @@ require("tokyonight").setup({
   ---@param colors ColorScheme
   on_colors = function(colors)
   ---	colors.border_highlight = colors.blue
+    colors.bg = "#1E1E1E"
     colors.bg_highlight = "#2155A1"
   end,
 
