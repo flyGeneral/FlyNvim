@@ -39,3 +39,10 @@ vim.api.nvim_set_keymap("n", "<leader>bg", ":BufferLinePick", {noremap = true, s
 
 vim.api.nvim_set_keymap("n", "bn", ":BufferLineCycleNext<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "bp", ":BufferLineCyclePrev<CR>", {noremap = true, silent = true})
+
+--- 关闭当前 buffer
+vim.api.nvim_set_keymap("n", "<leader>bc", ":bdelete %<CR>", {noremap = true, silent = true})
+--- 关闭指定 buffer
+vim.api.nvim_set_keymap("n", "<leader>bp", ":BufferLinePickClose<CR>", {noremap = true, silent = true})
+--- 关闭除当前buffer外的所有buffer
+vim.api.nvim_set_keymap("n", "<leader>bo", ":BufferLineCloseLeft<CR>:BufferLineCloseRight<CR>", {noremap = true, silent = true})
