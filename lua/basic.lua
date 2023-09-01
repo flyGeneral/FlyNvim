@@ -82,3 +82,5 @@ vim.o.showtabline = 2
 vim.o.showmode = false
 -- 配置剪切板
 vim.opt.clipboard = "unnamedplus"
+-- nvim 0.9 发现把宏定义也识别成注释，Google 配置解决
+vim.api.nvim_set_hl(0, '@lsp.type.comment.cpp', {})
