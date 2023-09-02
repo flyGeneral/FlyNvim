@@ -1,11 +1,33 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
+
+-- 自动提示3 详情信息
+local cmpFormat3 = function(entry, vim_item)
+  -- fancy icons and a name of kind
+  vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. ""
+  -- set a name for each source
+  vim_item.menu =
+    ({
+    buffer = "[Buffer]",
+    nvim_lsp = "",
+    ultisnips = "[UltiSnips]",
+    nvim_lua = "[Lua]",
+    cmp_tabnine = "[TabNine]",
+    look = "[Look]",
+    path = "[Path]",
+    spell = "[Spell]",
+    calc = "[Calc]",
+    emoji = "[Emoji]"
+  })[entry.source.name]
+  return vim_item
+end
+
 cmp.setup({
     -- 设置代码片段引擎，用于根据代码片段补全
     snippet = {
         expand = function(args)
-            vim.fn["vsnip#anymous"](args.body)
-        end,
+        require("luasnip").lsp_expand(args.body)
+        end
     },
 
     window = {
@@ -71,13 +93,6 @@ cmp.setup({
 
     -- 设置补全显示的格式
     formatting = {
-        format = lspkind.cmp_format({
-            with_text = true,
-            maxwidth = 50,
-            before = function(entry, vim_item)
-                vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"
-                return vim_item
-            end
-        }),
+        format = cmpFormat3,
     },
 })
