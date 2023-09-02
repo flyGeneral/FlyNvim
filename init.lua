@@ -5,8 +5,8 @@ require("keybindings")
 -- Packer插件管理
 require("plugins")
 -- require("plugin-config.nvim-treesitter")
--- neo-tree
-require("plugin-config.neo-tree")
+-- nvim-tree
+require("plugin-config.nvim-tree")
 -- 插件配置
 -- which key
 require("plugin-config.which-key")

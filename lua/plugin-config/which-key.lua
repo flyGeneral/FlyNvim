@@ -9,6 +9,9 @@ wk.register({
         },
         b = {
             name = "bufferline", -- 指定该快捷键组的名称
-        }
+        },
+        n = {
+            name = "NvimTree", --打开目录树
+        },
     }
 }, {silent = true, noremap = true})

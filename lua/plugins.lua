@@ -53,24 +53,16 @@ packer.startup({
         requires = 'kyazdani42/nvim-web-devicons'
     }
     use("numToStr/Comment.nvim")
+    -- 目录管理插件
     use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v3.x",
+        'nvim-tree/nvim-tree.lua',
         requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-        }
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
     use("liuchengxu/vista.vim")
-
-    -- use({
-    --   "nvim-treesitter/nvim-treesitter", commit = '4cccb6f494eb255b32a290d37c35ca12584c74d0',
-    --   requires = {
-    --     "p00f/nvim-ts-rainbow"
-    --   }
-    -- })
 
     -- 模糊搜索
     use("junegunn/fzf")
