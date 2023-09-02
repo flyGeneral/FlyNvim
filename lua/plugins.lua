@@ -114,6 +114,7 @@ packer.startup({
     use{"glepnir/lspsaga.nvim"}
     use {'simrat39/symbols-outline.nvim'}
 
+    use("windwp/nvim-autopairs")
 
     if paccker_bootstrap then
       packer.sync()
