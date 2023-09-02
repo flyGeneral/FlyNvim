@@ -25,3 +25,8 @@ for name, config in pairs(servers) do
     lspconfig[name].setup({})
   end
 end
+
+
+
+vim.api.nvim_set_keymap("n", "<leader>l", ":lua vim.lsp.buf.document_symbol()<CR>", {noremap = true, silent = true, desc = "file outline"})
+vim.api.nvim_set_keymap("n", "<leader>ll", ":cclose<CR>", {noremap = true, silent = true, desc = "file close"})
