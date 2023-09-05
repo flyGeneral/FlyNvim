@@ -7,6 +7,8 @@ require("plugins")
 -- require("plugin-config.nvim-treesitter")
 -- nvim-tree
 require("plugin-config.nvim-tree")
+-- 文件大纲
+require("plugin-config.symbols-outline")
 -- 插件配置
 -- which key
 require("plugin-config.which-key")
