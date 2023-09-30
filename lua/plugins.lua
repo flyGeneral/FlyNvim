@@ -62,6 +62,14 @@ packer.startup({
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
+    use({
+      "nvim-treesitter/nvim-treesitter", run = ':TSUpdate',
+      requires = {
+        "p00f/nvim-ts-rainbow"
+      }
+    })
+
+
     use("liuchengxu/vista.vim")
 
     -- 模糊搜索

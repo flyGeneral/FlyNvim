@@ -4,7 +4,8 @@ require("basic")
 require("keybindings")
 -- Packer插件管理
 require("plugins")
--- require("plugin-config.nvim-treesitter")
+-- 代码高亮
+require("plugin-config.nvim-treesitter")
 -- nvim-tree
 require("plugin-config.nvim-tree")
 -- 文件大纲
