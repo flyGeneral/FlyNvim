@@ -19,6 +19,14 @@ require("lazy").setup({
   {
     "RRethy/nvim-base16",
     lazy = true,
-  }
+  },
+  {
+    "junegunn/fzf",
+    keys = {
+      { "<leader>ff", ":Files<CR>", desc = "fzf find files" },
+      { "<leader>fa", ":Ag<CR>", desc = "fzf Ag Text" },
+    },
+    dependencies = {"junegunn/fzf.vim"},
+  },
 })
 vim.cmd.colorscheme("base16-tender")
