@@ -30,8 +30,8 @@ vim.api.nvim_set_keymap('n', '<C-l>', '10l', { noremap = true })
 
 vim.api.nvim_set_keymap('i', '<C-k>', '<C-o>10k', { noremap = true })
 vim.api.nvim_set_keymap('i', '<C-j>', '<C-o>10j', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-h>', '<C-o>10h', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-l>', '<C-o>10l', { noremap = true })
+-- vim.api.nvim_set_keymap('i', '<C-h>', '<C-o>10h', { noremap = true })
+-- vim.api.nvim_set_keymap('i', '<C-l>', '<C-o>10l', { noremap = true })
 
 -- nvim 分屏
 -- vim.api.nvim_set_keymap("n", "<leader>-", ":new <CR>", {noremap = true, silent = true, desc = "horizontal split"})
