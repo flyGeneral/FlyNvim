@@ -1,7 +1,4 @@
 -- local set = vim.o
-require("basic")
--- keybindings
-require("keybindings")
 -- lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -68,11 +65,13 @@ vim.cmd.colorscheme("base16-tender")
 require("mason").setup()
 require("mason-lspconfig").setup()
 
--- Set up lspconfig.
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
 require("neodev").setup({
 	-- add any options here, or leave empty to use the default settings
 })
 
 require("lsp-config.cmp")
 require("lsp-config.lspconfig")
+
+require("basic")
+require("keybindings")
+
