@@ -22,6 +22,7 @@ require("lazy").setup({
   },
   {
     "junegunn/fzf",
+    event = "VeryLazy",
     keys = {
       { "<leader>ff", ":Files<CR>", desc = "fzf find files" },
       { "<leader>fa", ":Ag<CR>", desc = "fzf Ag Text" },
