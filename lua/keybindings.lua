@@ -15,9 +15,6 @@ local opt = {
   silent = true,
 }
 
--- 本地变量
-local map = vim.api.nvim_set_keymap
-
 -- 插件快捷键
 local pluginKeys = {}
 
@@ -28,10 +25,10 @@ vim.api.nvim_set_keymap('n', '<C-j>', '10j', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-h>', '10h', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-l>', '10l', { noremap = true })
 
-vim.api.nvim_set_keymap('i', '<C-k>', '<C-o>10k', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-j>', '<C-o>10j', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-h>', '<C-o>10h', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-l>', '<C-o>10l', { noremap = true })
+-- vim.api.nvim_set_keymap('i', '<C-k>', '<C-o>10k', { noremap = true })
+-- vim.api.nvim_set_keymap('i', '<C-j>', '<C-o>10j', { noremap = true })
+-- vim.api.nvim_set_keymap('i', '<C-h>', '<C-o>10h', { noremap = true })
+-- vim.api.nvim_set_keymap('i', '<C-l>', '<C-o>10l', { noremap = true })
 
 
 -- nvim 分屏
@@ -39,31 +36,4 @@ vim.api.nvim_set_keymap("n", "<leader>-", ":new <CR>", {noremap = true, silent =
 vim.api.nvim_set_keymap("n", "<leader>=", ":vertical new <CR>", {noremap = true, silent = true, desc = "vertical split" })
 vim.api.nvim_set_keymap("n", "<leader>x", ":close <CR>", {noremap = true, silent = true, desc = "close current window"})
 
--- -- Telescope 命令模式快捷键
--- map("n", "<leader>tff", ":Telescope find_files<CR>", opt)
--- map("n", "<leader>tfg", ":Telescope live_grep<CR>", opt)
--- map("n", "<leader>tfb", ":Telescope buffers<CR>", opt)
--- map("n", "<leader>tfh", ":Telescope help_tags<CR>", opt)
--- map("n", "<leader>tsf", ":Telescope file_browser<CR>", opt)
--- -- Telescope 列表中 插入模式快捷键
--- pluginKeys.telescopeList = {
---   i = {
---     -- 上下移动
---     ["<C-j>"] = "move_selection_next",
---     ["<C-k>"] = "move_selection_previous",
---     ["<C-n>"] = "move_selection_next",
---     ["<C-p>"] = "move_selection_previous",
---     -- 历史记录
---     ["<Down>"] = "cycle_history_next",
---     ["<Up>"] = "cycle_history_prev",
---     -- 关闭窗口
---     -- ["<esc>"] = actions.close,
---     ["<C-c>"] = "close",
---     -- 预览窗口上下滚动
---     ["<C-u>"] = "preview_scrolling_up",
---     ["<C-d>"] = "preview_scrolling_down",
---   },
--- }
 
-
-return pluginKeys
