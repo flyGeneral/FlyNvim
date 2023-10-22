@@ -102,11 +102,18 @@ require("lazy").setup({
             vim.cmd.cnoreabbrev([[gp Git push]])
         end,
     },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        dependencies = {
+            "p00f/nvim-ts-rainbow"
+        },
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+    }
 })
 
 
--- 代码高亮
--- require("plugin-config.nvim-treesitter")
 -- nvim-tree
 require("plugin-config.nvim-tree")
 -- 插件配置
@@ -128,6 +135,10 @@ require("plugin-config.symbols-outline")
 require("plugin-config.tokyonight")
 -- comment
 require("plugin-config.Comment")
+-- nvim-treesitter
+require("plugin-config.nvim-treesitter")
+-- nvim-treesitter-context
+require("plugin-config.nvim-treesitter-context")
 
 -- start theme
 vim.cmd[[colorscheme tokyonight]]
