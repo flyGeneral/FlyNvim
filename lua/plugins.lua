@@ -110,7 +110,13 @@ require("lazy").setup({
     },
     {
         "nvim-treesitter/nvim-treesitter-context",
-    }
+    },
+    {
+        "ggandor/leap.nvim",
+        config = function()
+            require('leap').add_default_mappings()
+        end,
+    },
 })
 
 
