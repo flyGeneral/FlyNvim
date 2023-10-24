@@ -37,7 +37,7 @@ require("tokyonight").setup({
   on_colors = function(colors)
   ---	colors.border_highlight = colors.blue
     colors.bg = "#1E1E1E"
-    colors.bg_highlight = "#2155A1"
+--    colors.bg_highlight = "#2155A1"
   end,
 
   --- You can override specific highlights to use other groups or a hex color
