@@ -102,15 +102,15 @@ require("lazy").setup({
             vim.cmd.cnoreabbrev([[gp Git push]])
         end,
     },
-    {
-        "nvim-treesitter/nvim-treesitter",
-        dependencies = {
-            "p00f/nvim-ts-rainbow"
-        },
-    },
-    {
-        "nvim-treesitter/nvim-treesitter-context",
-    },
+    -- {
+    --     "nvim-treesitter/nvim-treesitter",
+    --     dependencies = {
+    --         "p00f/nvim-ts-rainbow"
+    --     },
+    -- },
+    -- {
+    --     "nvim-treesitter/nvim-treesitter-context",
+    -- },
     {
         "ggandor/leap.nvim",
         config = function()
@@ -142,9 +142,9 @@ require("plugin-config.tokyonight")
 -- comment
 require("plugin-config.Comment")
 -- nvim-treesitter
-require("plugin-config.nvim-treesitter")
+-- require("plugin-config.nvim-treesitter")
 -- nvim-treesitter-context
-require("plugin-config.nvim-treesitter-context")
+-- require("plugin-config.nvim-treesitter-context")
 
 -- start theme
 vim.cmd[[colorscheme tokyonight]]
