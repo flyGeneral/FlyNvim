@@ -19,19 +19,30 @@ local opt = {
 local pluginKeys = {}
 
 
--- vim.api.nvim_set_keymap('n', '<Tab>', '<Nop>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-k>', '10k', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-j>', '10j', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-h>', '10h', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-l>', '10l', { noremap = true })
+-- nvim common keybindings
+-- 在 copy 后高亮
+vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+        pattern = { "*" },
+        callback = function()
+                vim.highlight.on_yank({
+                        timeout = 300,
+                })
+        end,
+})
 
--- vim.api.nvim_set_keymap('i', '<C-k>', '<C-o>10k', { noremap = true })
--- vim.api.nvim_set_keymap('i', '<C-j>', '<C-o>10j', { noremap = true })
--- vim.api.nvim_set_keymap('i', '<C-h>', '<C-o>10h', { noremap = true })
--- vim.api.nvim_set_keymap('i', '<C-l>', '<C-o>10l', { noremap = true })
+-- nvim panel move
+vim.keymap.set("n", "<C-l>", "<C-w>l", opt)
+vim.keymap.set("n", "<C-h>", "<C-w>h", opt)
+vim.keymap.set("n", "<C-j>", "<C-w>j", opt)
+vim.keymap.set("n", "<C-k>", "<C-w>k", opt)
+-- https://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
+vim.keymap.set("n", "j", [[v:count ? 'j' : 'gj']], { noremap = true, expr = true })
+vim.keymap.set("n", "k", [[v:count ? 'k' : 'gk']], { noremap = true, expr = true })
 
+-- nvim split screen
+vim.keymap.set("n", "<Leader>v", "<C-w>v", opt)
+vim.keymap.set("n", "<Leader>s", "<C-w>s", opt)
 
--- nvim 分屏
 vim.api.nvim_set_keymap("n", "<leader>-", ":new <CR>", {noremap = true, silent = true, desc = "horizontal split"})
 vim.api.nvim_set_keymap("n", "<leader>=", ":vertical new <CR>", {noremap = true, silent = true, desc = "vertical split" })
 vim.api.nvim_set_keymap("n", "<leader>x", ":close <CR>", {noremap = true, silent = true, desc = "close current window"})
