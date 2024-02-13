@@ -163,11 +163,21 @@ require("lazy").setup({
     --         "rafamadriz/friendly-snippets" --代码段合集
     --     },
     -- },
+
+    {
+       cmd = "Telescope",
+       'nvim-telescope/telescope.nvim', tag = '0.1.5',
+       -- or                          , branch = '0.1.x',
+       dependencies = { 'nvim-lua/plenary.nvim' }
+    }
+
 })
 
 require("mason").setup()
 require("mason-lspconfig").setup()
 
+-- Telescope
+require("plugin-config.Telescope")
 -- nvim-tree
 require("plugin-config.nvim-tree")
 -- 插件配置
