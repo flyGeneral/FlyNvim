@@ -33,11 +33,6 @@ require("lazy").setup({
         dependencies = "nvim-tree/nvim-web-devicons",
         tag = "nightly"
     },
-    {
-        "junegunn/fzf",
-        event = "VeryLazy",
-        dependencies = "junegunn/fzf.vim"
-    },
     {   
         "windwp/nvim-autopairs",
         event = "VeryLazy",
@@ -183,8 +178,6 @@ require("plugin-config.nvim-tree")
 -- 插件配置
 -- which key
 require("plugin-config.which-key")
--- fzf config
-require("plugin-config.fzf")
 -- 状态栏插件
 require("plugin-config.lualine");
 -- bufferline
