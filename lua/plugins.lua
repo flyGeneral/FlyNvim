@@ -136,6 +136,8 @@ require("lazy").setup({
         },
     },
 
+    {'simrat39/symbols-outline.nvim'},
+
     {
         event = "VeryLazy",
         "williamboman/mason.nvim",
@@ -194,11 +196,11 @@ require("plugin-config.bufferline")
 -- require("lsp.setup")
 -- -- lsp auto complete
 -- require('plugin-config.cmp')
--- -- 文件大纲
--- require("plugin-config.symbols-outline")
 -- lsp mason
 require("lsp-mason.lsp_config")
 require("lsp-mason.cmp")
+-- 文件大纲
+require("plugin-config.symbols-outline")
 -- theme config
 require("plugin-config.tokyonight")
 -- comment
