@@ -97,6 +97,14 @@ require("lazy").setup({
             vim.cmd.cnoreabbrev([[gp Git push]])
         end,
     },
+    {
+        "tpope/vim-rhubarb",
+        event = "VeryLazy",
+    },
+    {
+        "rhysd/conflict-marker.vim",
+        event = "VeryLazy",
+    },
     -- {
     --     "nvim-treesitter/nvim-treesitter",
     --     dependencies = {
